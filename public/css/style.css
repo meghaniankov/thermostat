@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
 html,
 body {
   height: 100%;
@@ -6,11 +8,13 @@ body {
 
 body {
   text-align: center;
+  font-family: 'Righteous';
 }
 
 #current-temp-header {
-  font-size: 50px;
-  color: #2196f3;
+  padding: 50px 0px 0px 0px;
+  font-size: 40px;
+  color: #334f68;
 }
 .switch {
   position: relative;
@@ -50,11 +54,11 @@ body {
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #334f68;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #334f68;
 }
 
 input:checked + .slider:before {
@@ -72,7 +76,7 @@ input:checked + .slider:before {
 }
 
 button {
-  background-color: #2196f3;
+  background-color: #334f68;
   border: none;
   color: white;
   padding: 15px 15px;
@@ -82,17 +86,35 @@ button {
 }
 
 button:hover {
-  background-color: rgba(33, 149, 243, 0.582);
+  background-color: #334f6885;
   color: white;
 }
 
 #current-temp-display {
-  width: 25%;
+  width: 10%;
+  height: 60px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   margin: auto;
+  font-size: 40px;
+}
+
+#temperature {
+  padding: 5%;
 }
 
 #power-saving-mode {
   font-size: 25px;
+}
+
+.low-usage {
+  color: rgb(5, 77, 5);
+}
+
+.medium-usage {
+  color: black;
+}
+
+.high-usage {
+  color: maroon;
 }
