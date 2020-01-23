@@ -115,4 +115,11 @@ describe("Thermostat", function() {
       expect(thermostat.currentEnergyUsage()).toEqual("high-usage");
     });
   });
+
+  describe('Sets city', function() {
+    it('Sets city variable', function() {
+      thermostat.setCity('New York')
+      expect(thermostat.city).toEqual('New York')
+    })
+  })
 });

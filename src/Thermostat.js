@@ -7,6 +7,7 @@ function Thermostat() {
   this.minTemp = MINTEMP;
   this.maxTemp;
   this.powerSavingMode("On");
+  this.city = "London";
 }
 
 Thermostat.prototype.getCurrentTemp = function() {
@@ -57,6 +58,10 @@ Thermostat.prototype.currentEnergyUsage = function() {
     return "high-usage";
   }
 };
+
+Thermostat.prototype.setCity = function(userCity) {
+  this.city = userCity
+}
 
 Thermostat.prototype._setMaxTemp = function(degrees) {
   this.maxTemp = degrees;
