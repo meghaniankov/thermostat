@@ -39,10 +39,6 @@ $(document).ready(function() {
     $("#temperature").attr('class', thermostat.currentEnergyUsage())
   }
 
-  // function selectCity() {
-  //   console.log($("#selected-city").val())
-  // }
-
   $('#selected-city').change(function() {
     thermostat.setCity($("#selected-city").val())
     updateAPI()
@@ -59,7 +55,9 @@ $(document).ready(function() {
       .done(function( json ) {
         var temp = Math.round(json.main.temp)
         var humidity = json.main.humidity
-        $("#api-data").text(`Temp: ${temp}C Humidity: ${humidity}%`);
+        var tempIcon = "<img src='public/celsius.svg' height='42' width='42'>"
+        var humIcon = "<img src='public/water.svg' height='42' width='42'>"
+        $("#api-data").html(`${tempIcon} ${temp} ${humIcon} ${humidity}%`);
       })
   
       .fail(function( xhr, status, errorThrown ) {

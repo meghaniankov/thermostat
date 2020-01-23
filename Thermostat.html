@@ -21,28 +21,26 @@
 
     <div class='right'>
       <div id="power-saving-mode">
-        <div id="power-saving-mode-header">
-          Power Saving Mode:
-        </div>
         <div id="psm-check-box">
+            Power Saving Mode:
           <label class="switch">
             <input type="checkbox" checked>
             <span class="slider round"></span>
           </label>
         </div>
       </div>
-
-      <div id="current-temp">
-        Current Weather:
-        <div id="api-data"></div>
-      </div>
+      
       <div id="city">
-        <select id="selected-city">
-          <option value="London">London</option>
-          <option value="Paris">Paris</option>
-          <option value="Barcelona">Barcelona</option>
-        </select>
+          <span id='weather-header'>Weather for:</span>
+          <select id="selected-city">
+            <option value="London">London</option>
+            <option value="Paris">Paris</option>
+            <option value="Barcelona">Barcelona</option>
+          </select>
       </div>
+      <div id="current-weather">
+          <div id="api-data"></div>
+        </div>
     </div>
     <script src="src/Thermostat.js"></script>
     <script src="src/interface.js"></script>
