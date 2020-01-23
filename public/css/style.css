@@ -7,7 +7,7 @@ body {
 }
 
 body {
-  text-align: center;
+  display: flex;
   font-family: 'Righteous';
 }
 
@@ -90,17 +90,17 @@ button:hover {
   color: white;
 }
 
-#current-temp-display {
-  width: 10%;
-  height: 60px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
-  margin: auto;
-  font-size: 40px;
-}
-
 #temperature {
-  padding: 5%;
+  z-index: 0;
+  padding: 0;
+  padding-right: 20px;
+  position: relative;
+  left: 30px;
+  top: 30px;
+  margin: auto;
+  font-size: 500px;
+  line-height: 0.9em;
+  user-select: none;
 }
 
 #power-saving-mode {
@@ -117,4 +117,39 @@ button:hover {
 
 .high-usage {
   color: maroon;
+}
+
+.control {
+  padding: 20px;
+  padding-top: 70px;
+  z-index: 99;
+}
+
+.basic-control {
+  text-decoration: none;
+  font-size: 190px;
+  color: #334f68;
+  line-height: 50px;
+  z-index: 99;
+}
+
+.reset {
+  font-size: 85px;
+}
+.wrapper {
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  min-width: 50vw;
+  text-align: center;
+  margin-top: 50px;
+}
+
+a {
+  padding-right: 15px;
 }
