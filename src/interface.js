@@ -26,10 +26,8 @@ $(document).ready(function() {
   $('input[type="checkbox"').click(function() {
     if ($(this).is(":checked")) {
         thermostat.powerSavingMode("On");
-        alert("CHeckbox is checked.");
     } else if ($(this).is(":not(:checked")) {
         thermostat.powerSavingMode("Off");
-        alert("Checkbox us unchecked.");
     }
 });
 
